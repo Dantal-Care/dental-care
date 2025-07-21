@@ -43,9 +43,9 @@ export default function TestimonialsSection() {
 
           {/* Right side - Testimonials */}
           <div className="space-y-6">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial) => (
               <div
-                key={index}
+                key={testimonial.id}
                 className="bg-white rounded-xl p-6 shadow-xl"
               >
                 <div className="flex items-start gap-4">
