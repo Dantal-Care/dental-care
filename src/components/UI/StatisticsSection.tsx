@@ -2,7 +2,7 @@ export default function StatisticsSection() {
   const stats = [
     {
       number: '90%',
-      label: 'Patient satisfaction',
+      label: 'Patients satisfaction',
     },
     {
       number: '100+',
