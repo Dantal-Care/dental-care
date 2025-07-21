@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import data from '@/app/footer/data.json'
+import data from './data.json'
 import { Phone, MapPin, Mail, ArrowRight } from 'lucide-react'
 
 export default function Footer() {
