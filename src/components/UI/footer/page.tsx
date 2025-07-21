@@ -71,7 +71,7 @@ export default function Footer() {
 
                     <div className="flex gap-4">
                         {socialLinks.map((link, index) => {
-                            const getSocialIcon = (platform:any) => {
+                            const getSocialIcon = (platform: string) => {
                                 switch (platform) {
                                     case 'facebook':
                                         return (
