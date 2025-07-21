@@ -3,14 +3,17 @@ import Image from 'next/image';
 export default function TestimonialsSection() {
   const testimonials = [
     {
+      id: 1,
       name: 'De Silva',
       text: 'Well equipped place. Doctors are great and the prices are also not so high.',
     },
     {
+      id: 2,
       name: 'De Silva',
       text: 'Well equipped place. Doctors are great and the prices are also not so high. They have another branch in dehiwala.',
     },
     {
+      id: 3,
       name: 'De Silva',
       text: 'Well equipped place. Doctors are great and the prices are also not so high.',
     },
