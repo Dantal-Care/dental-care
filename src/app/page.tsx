@@ -1,3 +1,4 @@
+import Footer from '@/components/UI/footer/Footer';
 import HeroSlider from '@/components/UI/HeroSlider/HeroSlider';
 import Navbar from '@/components/UI/Navbar/Navbar';
 import StatisticsSection from '@/components/UI/StatisticsSection';
@@ -10,6 +11,7 @@ export default function Home() {
       <Navbar />
       <StatisticsSection />
       <TestimonialsSection />
+      <Footer />
     </div>
   );
 }
