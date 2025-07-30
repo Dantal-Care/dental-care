@@ -23,7 +23,7 @@ export default function AboutMe() {
 					{/* Text Content Section - Right Side */}
 					<div className="flex-1 lg:pl-8">
 						<h2 className="text-4xl lg:text-5xl font-bold text-black mb-6">
-							Get to know your dentist <br />
+							Get match with <br />
 							your dentist
 						</h2>
 						
