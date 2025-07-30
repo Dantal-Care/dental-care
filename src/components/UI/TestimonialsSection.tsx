@@ -3,14 +3,17 @@ import Image from 'next/image';
 export default function TestimonialsSection() {
   const testimonials = [
     {
+      id: 1,
       name: 'De Silva',
       text: 'Well equipped place. Doctors are great and the prices are also not so high.',
     },
     {
+      id: 2,
       name: 'De Silva',
       text: 'Well equipped place. Doctors are great and the prices are also not so high. They have another branch in dehiwala.',
     },
     {
+      id: 3,
       name: 'De Silva',
       text: 'Well equipped place. Doctors are great and the prices are also not so high.',
     },
@@ -43,9 +46,9 @@ export default function TestimonialsSection() {
 
           {/* Right side - Testimonials */}
           <div className="space-y-6">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial) => (
               <div
-                key={index}
+                key={testimonial.id}
                 className="bg-white rounded-xl p-6 shadow-xl"
               >
                 <div className="flex items-start gap-4">
