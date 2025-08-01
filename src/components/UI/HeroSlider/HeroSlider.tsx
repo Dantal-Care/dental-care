@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './HeroSlider.module.css';
 import Image from 'next/image';
 
-const HeroSlider = () => {
+const HeroSlider = ({ title }: { title: string }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const images = [
@@ -57,7 +57,7 @@ const HeroSlider = () => {
             
             {}
             <div className={styles.textContent}>
-              <h1 className={styles.heading}>WE CARE ABOUT YOUR SMILE</h1>
+              <h1 className={styles.heading}>{title}</h1>
               <button className={styles.ctaButton}>
                 Book an appointment 
                 <Image

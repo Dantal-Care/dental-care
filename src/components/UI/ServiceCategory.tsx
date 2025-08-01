@@ -23,10 +23,10 @@ export default function ServiceCategory({
     `,
       }}
     >
-      <div className="font-bold text-white text-xl sm:text-2xl text-center">
+      <div className="font-bold text-white text-2xl sm:text-2xl text-center">
         {title}
       </div>
-      <div className="text-white text-sm sm:text-base font-medium text-center">
+      <div className="text-gray-800 text-sm sm:text-base font-medium text-center">
         {description}
       </div>
     </div>
