@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 interface ServiceCategoryProps {
   imageUrl: string;
@@ -13,19 +12,21 @@ export default function ServiceCategory({
   description,
 }: ServiceCategoryProps) {
   return (
-    <div className="relative w-[281.74px] h-[298.31px] rounded-[60px] overflow-hidden p-6 shadow-lg flex flex-col items-center justify-end gap-3">
-      <Image
-        src={imageUrl}
-        alt={title}
-        layout="fill"
-        objectFit="cover"
-        className="z-0"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-white/20 to-primary/90 z-10"></div>
-      <div className="relative z-20 text-center text-white font-semibold text-3xl">
+    <div
+      className="w-full sm:w-[300px] h-[320px] rounded-[40px] relative overflow-hidden 
+             bg-cover bg-center bg-no-repeat 
+             p-6 shadow-lg flex flex-col items-center justify-end gap-3"
+      style={{
+        backgroundImage: `
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(0, 180, 216, 1)),
+      url('${imageUrl}')
+    `,
+      }}
+    >
+      <div className="font-bold text-white text-xl sm:text-2xl text-center">
         {title}
       </div>
-      <div className="relative z-20 text-center font-medium text-gray-800 text-lg">
+      <div className="text-white text-sm sm:text-base font-medium text-center">
         {description}
       </div>
     </div>

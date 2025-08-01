@@ -56,7 +56,7 @@ export default function ServiceCategoryPage({
     <div>
       <Navbar />
       <HeroSlider />
-      <div className="flex flex-wrap justify-center gap-x-6 gap-y-5 my-24">
+      <div className="flex flex-wrap justify-center gap-6 px-4 sm:px-6 md:px-12 my-12">
         {ServiceCategories.map((category) => (
           <ServiceCategory
             key={category.id}
