@@ -9,7 +9,7 @@ import Navbar from '@/components/UI/Navbar/Navbar';
 export default function Home() {
   return (
     <div className="font-poppins">
-      <HeroSlider />
+      <HeroSlider title="WE CARE ABOUT YOUR SMILE" />
       <Navbar />
       <ServiceSection />
       <AboutMe />
