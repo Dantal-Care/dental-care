@@ -15,7 +15,7 @@ export default function Footer() {
                     <h1 className="text-white text-4xl font-bold mb-6">{data.name}</h1>
                     <div className="bg-white rounded-lg p-4 shadow-lg">
                         <Image
-                            src="/Logo.jpg"
+                            src="/Logo.png"
                             width={120}
                             height={120}
                             alt="Dental Care Logo"
