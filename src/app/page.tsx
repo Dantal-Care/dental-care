@@ -5,7 +5,8 @@ import AboutMe from '@/components/UI/Aboutme';
 import Footer from '@/components/UI/footer/Footer';
 import HeroSlider from '@/components/UI/HeroSlider/HeroSlider';
 import Navbar from '@/components/UI/Navbar/Navbar';
-import GoogleMap from '@/components/UI/GoogleMaps/GoogleMap';
+// import GoogleMap from '@/components/UI/GoogleMaps/GoogleMap';
+import LocationSection from '@/components/UI/LocationSection';
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <AboutMe />
       <StatisticsSection />
       <TestimonialsSection />
-      <GoogleMap/>
+      {/* <GoogleMap/> */}
+      <LocationSection />
       <Footer />
     </div>
   );
