@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Button from './buttons/ServiceButton';
 
 export default function ServiceSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -344,22 +345,9 @@ export default function ServiceSection() {
 
         {/* View Services Button */}
         <div className="flex justify-center mt-12">
-          <button className="bg-primary cursor-pointer hover:bg-primary/80 justify-center text-white px-6 py-2 rounded-full font-light transition-colors duration-200 flex text-lg items-center gap-2">
+          <Button href="/services" size="lg">
             View Services
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
-          </button>
+          </Button>
         </div>
 
         {/* Dots */}
