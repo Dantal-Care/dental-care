@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import Navbar from '@/components/UI/Navbar/Navbar';
 import HeroSlider from '@/components/UI/HeroSlider/HeroSlider';
-import Footer from '@/components/UI/footer/Footer';
+import GoToTop from '@/components/UI/GoToTop';
 
 export default function AboutPage() {
   return (
@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className={styles.galleryItem}></div>
         </div>
       </section>
-      <Footer />
+      <GoToTop />
     </div>
   );
 }

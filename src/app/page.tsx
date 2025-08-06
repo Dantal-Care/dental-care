@@ -2,11 +2,11 @@ import StatisticsSection from '@/components/UI/StatisticsSection';
 import TestimonialsSection from '@/components/UI/TestimonialsSection';
 import ServiceSection from '@/components/UI/ServiceSection';
 import AboutMe from '@/components/UI/Aboutme';
-import Footer from '@/components/UI/footer/Footer';
 import HeroSlider from '@/components/UI/HeroSlider/HeroSlider';
 import Navbar from '@/components/UI/Navbar/Navbar';
 // import GoogleMap from '@/components/UI/GoogleMaps/GoogleMap';
 import LocationSection from '@/components/UI/LocationSection';
+import GoToTop from '@/components/UI/GoToTop';
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <TestimonialsSection />
       {/* <GoogleMap/> */}
       <LocationSection />
-      <Footer />
+      <GoToTop />
     </div>
   );
 }
