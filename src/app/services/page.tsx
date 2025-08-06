@@ -1,5 +1,3 @@
-import Navbar from '@/components/UI/Navbar/Navbar';
-import Footer from '@/components/UI/footer/Footer';
 import HeroSlider from '@/components/UI/HeroSlider/HeroSlider';
 import Button from '@/components/UI/buttons/ServiceButton';
 import { services, ServiceCategory } from '@/data/services';
@@ -32,7 +30,6 @@ function ServiceCategoryCard({ category }: ServiceCategoryCardProps) {
 export default function ServicesPage() {
   return (
     <div>
-      <Navbar />
       <HeroSlider title="Our Services" />
       <div className="px-4 sm:px-6 md:px-12 my-12 max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-800">
@@ -44,7 +41,6 @@ export default function ServicesPage() {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 }
