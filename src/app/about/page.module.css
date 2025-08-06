@@ -1,0 +1,221 @@
+.pageContainer {
+  font-family: var(--font-poppins);
+}
+
+/* --- Hero Section --- */
+.heroSection {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.heroText {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 90%;
+  font-family: var(--font-poppins);
+}
+
+.heroText h1 {
+  font-size: 5rem;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-poppins);
+}
+
+.gradientOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to bottom, 
+      rgba(135, 135, 135, 0.7) 0%, 
+      rgba(135, 135, 135, 0.3) 20%,
+      transparent 60%
+    ),
+    
+    linear-gradient(to top, 
+      rgba(0, 180, 216, 0.9) 0%, 
+      rgba(0, 180, 216, 0.5) 10%,
+      transparent 70%
+    ),
+    
+    radial-gradient(
+      ellipse at center,
+      transparent 25%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+
+
+.ctaButton {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center; 
+  gap: 0.5rem;
+}
+
+.ctaButton:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  filter: brightness(0) invert(1);  
+}
+
+/* --- Profile Section --- */
+.profileSection {
+  background: #e6f5ff;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.profileCard {
+  max-width: 1200px;
+  background: rgba(148, 219, 248, 0.5); 
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.doctorImage {
+  flex-shrink: 0;
+  border-radius: 0%;
+}
+
+.docImage {
+  object-fit: cover;
+}
+
+.doctorInfo h2 {
+  color: #00B4D8;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.doctorInfo p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: black;
+}
+
+.doctorInfo ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1rem;
+  color: black;
+}
+
+/* --- Gallery Section --- */
+.gallerySection {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: white;
+}
+
+.gallerySection h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.galleryItem {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #ccc;
+  border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .heroText h1 {
+    font-size: 4rem;
+  }
+  
+  .profileCard {
+    flex-direction: row;
+  }
+  
+  .galleryGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallerySection h2 {
+    font-size: 2.5rem;
+  }
+  .ctaButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroText h1 {
+    font-size: 2.5rem;
+  }
+  
+  .doctorInfo h2 {
+    font-size: 1.5rem;
+  }
+  
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallerySection h2 {
+    font-size: 1.8rem;
+  }
+  .doctorInfo p {
+    font-size: 0.8rem;
+  }
+  .doctorInfo ul {
+    font-size: 0.8rem;
+  }
+  .ctaButton {
+    padding: 0.6rem 1rem;
+  }
+}

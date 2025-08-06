@@ -1,0 +1,523 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/page.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+.page_mainContainer__uvqiI {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/HeroSlider/HeroSlider.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************/
+/* Original unchanged code */
+.HeroSlider_heroContainer__bUBSl {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.HeroSlider_slidesContainer__tSGdn {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.HeroSlider_slide__ec6_i {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  margin: 0;
+  padding: 0;
+}
+
+.HeroSlider_slide__ec6_i.HeroSlider_active__sk__Q {
+  opacity: 1;
+}
+
+.HeroSlider_imageLayer__13M9_ {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.HeroSlider_image__Jn3U6 {
+  object-fit: cover;
+  object-position: center;
+}
+
+.HeroSlider_gradientOverlay__sbaBh {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to bottom, 
+      rgba(135, 135, 135, 0.7) 0%, 
+      rgba(135, 135, 135, 0.3) 30%,
+      transparent 60%
+    ),
+    
+    linear-gradient(to top, 
+      rgba(0, 180, 216, 0.9) 0%, 
+      rgba(0, 180, 216, 0.5) 30%,
+      transparent 70%
+    ),
+    
+    radial-gradient(
+      ellipse at center,
+      transparent 65%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+
+.HeroSlider_textContent__Ix_4h {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+  width: 80%;
+  max-width: 800px;
+}
+
+.HeroSlider_heading__y5kqt {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.HeroSlider_ctaButton__am0zf {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: inline-flex;
+  align-items: center; 
+  gap: 0.5rem;
+}
+
+.HeroSlider_ctaButton__am0zf:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.HeroSlider_dotsContainer__7QtN9 {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.HeroSlider_dot__ivywC {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.HeroSlider_dot__ivywC:hover, .HeroSlider_activeDot__7XiTs {
+  background-color: white;
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.HeroSlider_icon___dej_ {
+  filter: brightness(0) invert(1);  
+}
+
+/* Added responsive enhancements */
+@media (max-width: 1200px) {
+  .HeroSlider_heading__y5kqt {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .HeroSlider_heading__y5kqt {
+    font-size: 3.5rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .HeroSlider_ctaButton__am0zf {
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .HeroSlider_heading__y5kqt {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .HeroSlider_ctaButton__am0zf {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .HeroSlider_gradientOverlay__sbaBh {
+    background: 
+      linear-gradient(to bottom, 
+        rgba(135, 135, 135, 0.6) 0%,
+        transparent 40%
+      ),
+      linear-gradient(to top, 
+        rgba(0, 180, 216, 0.8) 0%,
+        transparent 50%
+      );
+    opacity: 0.85;
+  }
+  
+  .HeroSlider_dotsContainer__7QtN9 {
+    bottom: 1.5rem;
+  }
+  
+  .HeroSlider_dot__ivywC {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .HeroSlider_heading__y5kqt {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .HeroSlider_textContent__Ix_4h {
+    width: 90%;
+  }
+  
+  .HeroSlider_ctaButton__am0zf {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .HeroSlider_dotsContainer__7QtN9 {
+    bottom: 1rem;
+    gap: 0.7rem;
+  }
+  
+  .HeroSlider_dot__ivywC {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 400px) {
+  .HeroSlider_heading__y5kqt {
+    font-size: 1.8rem;
+  }
+  
+  .HeroSlider_ctaButton__am0zf {
+    padding: 0.6rem 1rem;
+  }
+}
+
+/*--------------------------image styles------------------------*/
+
+.HeroSlider_imageLayer__13M9_ {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.HeroSlider_image__Jn3U6 {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .HeroSlider_image__Jn3U6 {
+    object-position: center center;
+  }
+}
+
+@media (max-width: 992px) {
+  .HeroSlider_image__Jn3U6 {
+    object-position: center top; 
+  }
+}
+
+@media (max-width: 768px) {
+  .HeroSlider_image__Jn3U6 {
+    object-position: 25% center; 
+  }
+  
+  .HeroSlider_gradientOverlay__sbaBh {
+    background: 
+      linear-gradient(to bottom, 
+        rgba(135, 135, 135, 0.6) 0%,
+        transparent 40%
+      ),
+      linear-gradient(to top, 
+        rgba(0, 180, 216, 0.8) 0%,
+        transparent 50%
+      );
+  }
+}
+
+@media (max-width: 576px) {
+  .HeroSlider_image__Jn3U6 {
+    object-position: 30% center; 
+  }
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/Navbar/Navbar.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/* Navbar.module.css */
+.Navbar_navbar__UMdIx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 3.5rem;
+  background: rgba(217, 217, 217, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 39.6px;
+  margin: 1rem auto;
+  max-width: 1400px;
+  color: black;
+  position: absolute;
+  font-size: 1.1rem;
+  z-index: 10;
+  top: 2rem;
+  left: 50%;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  transform: translateX(-50%);
+}
+
+.Navbar_logoContainer__FRG8N {
+  display: flex;
+  align-items: center;
+}
+
+
+.Navbar_logoContainer__FRG8N, .Navbar_navLeft__BP3Uh, .Navbar_contactBtn__3m8ZC {
+  z-index: 11;
+}
+
+.Navbar_logoCircle__YfQjA {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.Navbar_logoImage__T2PN_ {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.Navbar_navLeft__BP3Uh {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.Navbar_navLinks__kYCXg {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-right: 120px;
+}
+
+.Navbar_navLinks__kYCXg a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.Navbar_navLinks__kYCXg a:hover {
+  color: white;
+}
+
+.Navbar_contactBtn__3m8ZC {
+  background: #00B4D8;
+  border-radius: 39.5px;
+  padding: 0 1.7rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0;
+  min-width: 120px;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.Navbar_contactBtn__3m8ZC::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom left, transparent 50%, #94DBF8 50%);
+  background-size: 200% 200%; 
+  background-position: top right; 
+  transition: background-position 0.4s ease-out; 
+  z-index: -1; 
+  border-radius: 39.5px; 
+}
+
+.Navbar_contactBtn__3m8ZC:hover::before {
+  background-position: bottom left;
+}
+
+.Navbar_contactBtn__3m8ZC:hover {
+  color: white; 
+}
+
+.Navbar_icon__b0Hko {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease, fill 0.3s ease;
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: brightness(0) invert(1) drop-shadow(0 0 1px white);
+}
+
+
+.Navbar_contactBtn__3m8ZC:hover .Navbar_icon__b0Hko {
+  transform: translateX(3px);
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .Navbar_navLinks__kYCXg {
+    gap: 2rem;
+    margin-right: 110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Navbar_navbar__UMdIx {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .Navbar_navLeft__BP3Uh {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .Navbar_navLinks__kYCXg {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  .Navbar_contactBtn__3m8ZC {
+    position: relative;
+    border-radius: 39.6px;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
+
+
+
+/*----------------------------------------*/
+.Navbar_hamburger__ZaVM2 {
+  display: none;
+  cursor: pointer;
+  z-index: 20;
+  color: white;
+}
+@media (max-width: 768px) {
+  .Navbar_logoContainer__FRG8N {
+    align-self: flex-start;
+    margin-left: 1rem;
+  }
+
+  .Navbar_navbar__UMdIx {
+    align-items: flex-start;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .Navbar_hamburger__ZaVM2 {
+    display: block;
+    position: absolute;
+    top: 1.4rem;
+    right: 1.7rem;
+  }
+
+  .Navbar_navLeft__BP3Uh {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    background: rgba(217, 217, 217, 0.95);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    animation: Navbar_slideDown__PzXiN 0.3s ease-in-out forwards;
+  }
+
+  .Navbar_navMobileOpen__9XyB2 {
+    display: flex;
+  }
+
+  @keyframes Navbar_slideDown__PzXiN {
+    0% {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
