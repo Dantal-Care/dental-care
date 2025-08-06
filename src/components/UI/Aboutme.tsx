@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import AboutmeButton from './AboutmeButton';
+import AboutmeButton from './buttons/AboutmeButton';
 
 export default function AboutMe() {
   return (
