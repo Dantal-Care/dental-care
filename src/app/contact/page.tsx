@@ -1,6 +1,8 @@
 'use client'
 import React, { useState } from 'react'
+import Lottie from 'lottie-react'
 import Navbar from '../../components/UI/Navbar/Navbar'
+import contactAnimation from '../../assets/animations/contact-animation.json'
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -51,8 +53,8 @@ const ContactUs = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar/>
       
-      <div className="container mx-auto px-4 py-16 mt-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 py-16 mt-20 ">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mx-30">
           {/* Left Side - Contact Form */}
           <div className="space-y-8">
             <div>
@@ -83,11 +85,11 @@ const ContactUs = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="Name"
+                  placeholder="Full Name"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border-b-2 border-gray-300 bg-transparent focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full px-4 py-4 border-b-2 border-gray-300 bg-transparent focus:border-cyan-400 focus:outline-none transition-colors text-gray-700 placeholder-gray-500"
                 />
               </div>
               
@@ -95,23 +97,23 @@ const ContactUs = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Email"
+                  placeholder="Email Address"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border-b-2 border-gray-300 bg-transparent focus:border-cyan-400 focus:outline-none transition-colors"
+                  className="w-full px-4 py-4 border-b-2 border-gray-300 bg-transparent focus:border-cyan-400 focus:outline-none transition-colors text-gray-700 placeholder-gray-500"
                 />
               </div>
               
               <div>
                 <textarea
                   name="message"
-                  placeholder="Your message"
+                  placeholder="Tell us about your dental concerns or questions..."
                   rows={4}
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border-b-2 border-gray-300 bg-transparent focus:border-cyan-400 focus:outline-none transition-colors resize-none"
+                  className="w-full px-4 py-4 border-b-2 border-gray-300 bg-transparent focus:border-cyan-400 focus:outline-none transition-colors resize-none text-gray-700 placeholder-gray-500"
                 ></textarea>
               </div>
               
@@ -120,19 +122,26 @@ const ContactUs = () => {
                 disabled={isSubmitting}
                 className="bg-cyan-400 text-white px-8 py-3 rounded-full font-medium hover:bg-cyan-500 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Sending...' : 'Send'}
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </form>
           </div>
           
-          {/* Right Side - Dental Office Image */}
-          <div className="lg:pl-8">
-            <div className="rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="/api/placeholder/600/400"
-                alt="Modern dental office interior with dental chair and equipment"
-                className="w-full h-full object-cover"
-              />
+          {/* Right Side - Contact Animation */}
+          <div className="lg:pl-8 flex justify-center items-center">
+            <div className="w-full max-w-lg">
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 shadow-lg">
+                <Lottie 
+                  animationData={contactAnimation}
+                  loop={true}
+                  autoplay={true}
+                  style={{ width: '100%', height: '300px' }}
+                />
+                <div className="text-center mt-4">
+                  <h3 className="text-2xl font-bold text-gray-700 mb-2">Let's Get In Touch</h3>
+                  <p className="text-gray-600">We're here to answer all your dental questions</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
