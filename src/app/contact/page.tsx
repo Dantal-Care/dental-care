@@ -1,9 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import emailjs from '@emailjs/browser';
 import Navbar from "../../components/UI/Navbar/Navbar";
 
 const ContactUs = () => {
+  const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,22 +32,19 @@ const ContactUs = () => {
     setSubmitStatus("idle");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      // Replace these with your actual EmailJS credentials
+      const result = await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+        form.current!,
+        process.env.NEXT_PUBLIC_PUBLIC_KEY!
+      );
 
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        setSubmitStatus("error");
-      }
+      console.log('SUCCESS!', result.text);
+      setSubmitStatus("success");
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("Error sending email:", error);
+      console.error('FAILED...', error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -87,7 +86,7 @@ const ContactUs = () => {
             )}
 
             {/* Contact Form */}
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form ref={form} className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <input
                   type="text"
