@@ -8,7 +8,7 @@ import GoToTop from '@/components/UI/GoToTop';
 
 export default function AboutPage() {
   return (
-    <div>
+    <>
       <Navbar />
       <HeroSlider title="Get to know about your dentist" />
       <section className={styles.profileSection}>
@@ -50,6 +50,6 @@ export default function AboutPage() {
         </div>
       </section>
       <GoToTop />
-    </div>
+    </>
   );
 }
