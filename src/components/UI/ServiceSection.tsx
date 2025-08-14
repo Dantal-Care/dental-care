@@ -250,16 +250,15 @@ export default function ServiceSection() {
   const totalPages = Math.ceil(services.length / itemsPerPage);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex + itemsPerPage >= services.length ? 0 : prevIndex + itemsPerPage
+    setCurrentIndex(
+      (prevIndex) => (prevIndex + itemsPerPage) % services.length
     );
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0
-        ? Math.max(0, services.length - itemsPerPage)
-        : prevIndex - itemsPerPage
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - itemsPerPage + services.length) % services.length
     );
   };
 
@@ -304,7 +303,6 @@ export default function ServiceSection() {
             onClick={prevSlide}
             aria-label="Previous services"
             className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-all duration-200 text-gray-600 hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={currentIndex === 0}
           >
             <svg
               className="w-6 h-6"
@@ -325,7 +323,6 @@ export default function ServiceSection() {
             onClick={nextSlide}
             aria-label="Next services"
             className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-6 bg-white rounded-full p-2 shadow-md hover:shadow-lg transition-all duration-200 text-gray-600 hover:text-primary disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={currentIndex + itemsPerPage >= services.length}
           >
             <svg
               className="w-6 h-6"
