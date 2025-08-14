@@ -1,0 +1,18 @@
+{
+  "name": "Dental Care",
+  "array": [
+    { "name": "Home", "url": "/" },
+    { "name": "About me", "url": "/about" },
+    { "name": "Services", "url": "/services" },
+    { "name": "Contact", "url": "/contact" }
+  ],
+  "address": "74B Matara - Akuressa Hwy, Matara",
+  "mobile": "0716836872",
+  "email": "n19nallaperuma@gmail.com",
+  "links": [
+    "https://www.facebook.com/profile.php?id=100089628247787",
+    "https://www.instagram.com/__thanuka____?igsh=MWo4bnRpNHgxZWI4eA==",
+    "https://www.tiktok.com/@gangsta.aaa?_t=ZS-8xvcAbU3yxV&_r=1"
+  ],
+  "platform": ["facebook", "instagram", "tiktok"]
+}
