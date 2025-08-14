@@ -13,7 +13,6 @@ interface PageProps {
   params: Promise<{
     category: string;
   }>;
-  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }
 
 export default async function ServiceCategoryPage({ params }: PageProps) {
