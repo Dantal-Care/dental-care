@@ -33,7 +33,7 @@ export default function TestimonialsSection() {
               have got five-star ratings, and most of the people recommend us to
               their friends and families.
             </p>
-            <button className="bg-primary cursor-pointer hover:bg-primary/80 justify-center text-white px-6 py-2 rounded-full font-light transition-colors duration-200 flex text-lg items-center gap-2">
+            {/* <button className="bg-primary cursor-pointer hover:bg-primary/80 justify-center text-white px-6 py-2 rounded-full font-light transition-colors duration-200 flex text-lg items-center gap-2">
               View more
               <Image
                 src={'/keyboard_arrow_up2.svg'}
@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
                 height={32}
                 alt="arrow up"
               />
-            </button>
+            </button> */}
           </div>
 
           {/* Right side - Testimonials */}
