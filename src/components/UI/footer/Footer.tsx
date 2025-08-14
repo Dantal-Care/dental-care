@@ -140,10 +140,6 @@
 //   );
 // }
 
-
-
-
-
 import Image from 'next/image';
 import data from './data.json';
 import { Phone, MapPin, Mail, ArrowRight } from 'lucide-react';
@@ -156,11 +152,11 @@ export default function Footer() {
 
   const getSocialIcon = (platform: string) => {
     const iconProps = {
-      width: "20",
-      height: "20",
-      viewBox: "0 0 24 24",
-      fill: "currentColor",
-      className: "transition-transform duration-200 group-hover:scale-110"
+      width: '20',
+      height: '20',
+      viewBox: '0 0 24 24',
+      fill: 'currentColor',
+      className: 'transition-transform duration-200 group-hover:scale-110',
     };
 
     switch (platform.toLowerCase()) {
@@ -185,35 +181,40 @@ export default function Footer() {
       case 'linkedin':
         return (
           <svg {...iconProps} aria-label="LinkedIn">
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
           </svg>
         );
       case 'twitter':
       case 'x':
         return (
           <svg {...iconProps} aria-label="X (Twitter)">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
           </svg>
         );
       case 'youtube':
         return (
           <svg {...iconProps} aria-label="YouTube">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
           </svg>
         );
       default:
         return (
-          <div className="w-3 h-3 bg-current rounded-full" aria-label="Social Link" />
+          <div
+            className="w-3 h-3 bg-current rounded-full"
+            aria-label="Social Link"
+          />
         );
     }
   };
 
   return (
-    <footer className="bg-gradient-to-br from-[#00B4D8] to-[#0077B6] font-poppins" role="contentinfo">
+    <footer
+      className="bg-gradient-to-br from-[#00B4D8] to-[#0077B6] font-poppins"
+      role="contentinfo"
+    >
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 xl:gap-16">
-          
           {/* Brand Section */}
           <div className="flex flex-col items-center md:items-start lg:items-center text-center md:text-left lg:text-center order-1 lg:order-1">
             <div className="mb-6">
@@ -235,7 +236,11 @@ export default function Footer() {
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-center md:text-left">
               Quick Links
             </h2>
-            <nav className="space-y-3 lg:space-y-4" role="navigation" aria-label="Footer navigation">
+            <nav
+              className="space-y-3 lg:space-y-4"
+              role="navigation"
+              aria-label="Footer navigation"
+            >
               {nav.map((item, index) => (
                 <Link
                   href={item.url}
@@ -265,14 +270,16 @@ export default function Footer() {
             <div className="space-y-6 lg:space-y-8 mb-8 lg:mb-10">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-3 group justify-center sm:justify-start">
                 <div className="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full group-hover:bg-white/30 transition-all duration-300 flex-shrink-0">
-                  <MapPin 
-                    size={20} 
-                    className="text-white group-hover:scale-110 transition-all duration-300" 
+                  <MapPin
+                    size={20}
+                    className="text-white group-hover:scale-110 transition-all duration-300"
                     aria-hidden="true"
                   />
                 </div>
                 <div className="min-w-0 text-center sm:text-left flex-1">
-                  <p className="text-sm text-white/80 mb-2 font-semibold uppercase tracking-wide">Address</p>
+                  <p className="text-sm text-white/80 mb-2 font-semibold uppercase tracking-wide">
+                    Address
+                  </p>
                   <address className="text-white text-base lg:text-lg leading-relaxed not-italic font-medium">
                     {data.address}
                   </address>
@@ -281,15 +288,17 @@ export default function Footer() {
 
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-3 group justify-center sm:justify-start">
                 <div className="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full group-hover:bg-white/30 transition-all duration-300 flex-shrink-0">
-                  <Phone 
-                    size={20} 
-                    className="text-white group-hover:scale-110 transition-all duration-300" 
+                  <Phone
+                    size={20}
+                    className="text-white group-hover:scale-110 transition-all duration-300"
                     aria-hidden="true"
                   />
                 </div>
                 <div className="text-center sm:text-left flex-1">
-                  <p className="text-sm text-white/80 mb-2 font-semibold uppercase tracking-wide">Phone</p>
-                  <a 
+                  <p className="text-sm text-white/80 mb-2 font-semibold uppercase tracking-wide">
+                    Phone
+                  </p>
+                  <a
                     href={`tel:${data.mobile}`}
                     className="text-white hover:text-white/90 text-base lg:text-lg transition-colors duration-200 font-medium block"
                     aria-label={`Call ${data.mobile}`}
@@ -301,15 +310,17 @@ export default function Footer() {
 
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-3 group justify-center sm:justify-start">
                 <div className="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full group-hover:bg-white/30 transition-all duration-300 flex-shrink-0">
-                  <Mail 
-                    size={20} 
-                    className="text-white group-hover:scale-110 transition-all duration-300" 
+                  <Mail
+                    size={20}
+                    className="text-white group-hover:scale-110 transition-all duration-300"
                     aria-hidden="true"
                   />
                 </div>
                 <div className="text-center sm:text-left flex-1 min-w-0">
-                  <p className="text-sm text-white/80 mb-2 font-semibold uppercase tracking-wide">Email</p>
-                  <a 
+                  <p className="text-sm text-white/80 mb-2 font-semibold uppercase tracking-wide">
+                    Email
+                  </p>
+                  <a
                     href={`mailto:${data.email}`}
                     className="text-white hover:text-white/90 text-base lg:text-lg transition-colors duration-200 font-medium block break-all"
                     aria-label={`Send email to ${data.email}`}
@@ -334,7 +345,9 @@ export default function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-11 h-11 lg:w-12 lg:h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 hover:scale-110 hover:-translate-y-1 group focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-[#00B4D8]"
-                      aria-label={`Follow us on ${platform[index] || 'social media'}`}
+                      aria-label={`Follow us on ${
+                        platform[index] || 'social media'
+                      }`}
                     >
                       {getSocialIcon(platform[index])}
                     </a>
@@ -353,7 +366,7 @@ export default function Footer() {
             <p className="text-white/70 text-xs sm:text-sm font-medium">
               © {new Date().getFullYear()} {data.name}. All Rights Reserved.
             </p>
-            
+
             {/* Optional: Add privacy links */}
             {/* <div className="flex items-center gap-4 lg:gap-6">
               <Link 
