@@ -26,7 +26,7 @@ export default function GoToTop() {
 
   return (
     <motion.button
-      className="fixed bottom-6 right-6 bg-primary p-3 rounded-full shadow-xl flex items-center justify-center transition-all duration-300"
+      className="fixed bottom-6 right-6 bg-primary p-3 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 z-50"
       onClick={scrollToTop}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: showButton ? 1 : 0, y: showButton ? 0 : 50 }}
