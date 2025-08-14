@@ -349,13 +349,13 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="border-t border-white/20 bg-black/10 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center sm:text-left">
             <p className="text-white/70 text-xs sm:text-sm font-medium">
               © {new Date().getFullYear()} {data.name}. All Rights Reserved.
             </p>
             
             {/* Optional: Add privacy links */}
-            <div className="flex items-center gap-4 lg:gap-6">
+            {/* <div className="flex items-center gap-4 lg:gap-6">
               <Link 
                 href="/privacy-policy" 
                 className="text-white/70 hover:text-white text-xs sm:text-sm transition-colors duration-200 font-medium"
@@ -368,7 +368,7 @@ export default function Footer() {
               >
                 Terms of Service
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
