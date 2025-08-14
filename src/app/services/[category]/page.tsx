@@ -9,13 +9,22 @@ export async function generateStaticParams() {
   }));
 }
 
-interface Props {
-  params: { category: string };
+interface PageProps {
+  params: Promise<{
+    category: string;
+  }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }
 
-export default function ServiceCategoryPage({ params }: Props) {
-  const categoryData = services.find((cat) => cat.slug === params.category);
+export default async function ServiceCategoryPage({
+  params,
+  searchParams,
+}: PageProps) {
+  const { category } = await params;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const query = searchParams ? await searchParams : {};
 
+  const categoryData = services.find((cat) => cat.slug === category);
   if (!categoryData) return notFound();
 
   return (
