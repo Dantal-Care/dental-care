@@ -16,13 +16,8 @@ interface PageProps {
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }
 
-export default async function ServiceCategoryPage({
-  params,
-  searchParams,
-}: PageProps) {
+export default async function ServiceCategoryPage({ params }: PageProps) {
   const { category } = await params;
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const query = searchParams ? await searchParams : {};
 
   const categoryData = services.find((cat) => cat.slug === category);
   if (!categoryData) return notFound();
