@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Navbar.module.css';
@@ -8,6 +9,7 @@ import { FiSend, FiMenu, FiX } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -17,10 +19,10 @@ const Navbar = () => {
     <header className={styles.navbar}>
       <div className={styles.logoContainer}>
         <div className={styles.logoCircle}>
-          <Image 
-            src="/logo.png" 
-            alt="Logo" 
-            width={20} 
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={20}
             height={20}
             priority
             className={styles.logoImage}
@@ -39,9 +41,27 @@ const Navbar = () => {
         }`}
       >
         <nav className={styles.navLinks}>
-          <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-          <Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>About Me</Link>
-          <Link href="/services" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
+          <Link
+            href="/"
+            className={pathname === '/' ? styles.activeLink : ''}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            href="/about"
+            className={pathname === '/about' ? styles.activeLink : ''}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            About Me
+          </Link>
+          <Link
+            href="/services"
+            className={pathname === '/services' ? styles.activeLink : ''}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Services
+          </Link>
         </nav>
         <Link
           href="/contact"
