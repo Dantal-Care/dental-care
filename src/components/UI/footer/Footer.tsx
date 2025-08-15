@@ -220,7 +220,7 @@ export default function Footer() {
             <div className="mb-6">
               <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 lg:p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
                 <Image
-                  src="/Logo.png"
+                  src="/logo.png"
                   width={100}
                   height={100}
                   alt={`${data.name} Logo`}
@@ -237,70 +237,72 @@ export default function Footer() {
               Quick Links
             </h2>
             <nav
-              className="space-y-3 lg:space-y-4"
+              className="flex flex-col items-center md:items-start"
               role="navigation"
               aria-label="Footer navigation"
             >
-              {nav.map((item, index) => (
-                <Link
-                  href={item.url}
-                  key={index}
-                  className="flex items-center gap-3 group cursor-pointer justify-center md:justify-start hover:pl-2 transition-all duration-300"
-                >
-                  <ArrowRight
-                    size={16}
-                    className="text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 flex-shrink-0"
-                    aria-hidden="true"
-                  />
-                  <p className="text-white/90 group-hover:text-white transition-colors duration-300 text-base lg:text-lg font-medium">
-                    {item.name}
-                  </p>
-                </Link>
-              ))}
+              <div className="space-y-2 lg:space-y-3 w-fit">
+                {nav.map((item, index) => (
+                  <Link
+                    href={item.url}
+                    key={index}
+                    className="flex items-center gap-3 group cursor-pointer hover:pl-2 transition-all duration-300"
+                  >
+                    <ArrowRight
+                      size={16}
+                      className="text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 flex-shrink-0"
+                      aria-hidden="true"
+                    />
+                    <p className="text-white/90 group-hover:text-white transition-colors duration-300 text-base lg:text-lg font-medium whitespace-nowrap">
+                      {item.name}
+                    </p>
+                  </Link>
+                ))}
+              </div>
             </nav>
           </div>
 
           {/* Contact & Social Section */}
           <div className="text-white order-2 lg:order-3">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-center">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-center md:text-left">
               Get in Touch
             </h2>
 
             {/* Contact Information */}
-            <div className="space-y-6 lg:space-y-8 mb-8 lg:mb-10">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-3 group justify-center sm:justify-start">
-                <div className="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full group-hover:bg-white/30 transition-all duration-300 flex-shrink-0">
+            <div className="space-y-4 md:space-y-6 lg:space-y-8 mb-6 md:mb-8 lg:mb-10">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-4 group">
+                <div className="flex items-center justify-center w-11 h-11 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-full group-hover:bg-white/30 transition-all duration-300 flex-shrink-0">
                   <MapPin
-                    size={20}
-                    className="text-white group-hover:scale-110 transition-all duration-300"
+                    size={18}
+                    className="text-white group-hover:scale-110 transition-all duration-300 md:size-5"
                     aria-hidden="true"
                   />
                 </div>
-                <div className="min-w-0 text-center sm:text-left flex-1">
-                  <p className="text-sm text-white/80 mb-2 font-semibold uppercase tracking-wide">
+                <div className="min-w-0 text-center md:text-left flex-1">
+                  <p className="text-xs md:text-sm text-white/80 mb-1 md:mb-2 font-semibold uppercase tracking-wide">
                     Address
                   </p>
-                  <address className="text-white text-base lg:text-lg leading-relaxed not-italic font-medium">
+                  <address className="text-white text-sm md:text-base lg:text-lg leading-relaxed not-italic font-medium">
                     {data.address}
                   </address>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-3 group justify-center sm:justify-start">
-                <div className="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full group-hover:bg-white/30 transition-all duration-300 flex-shrink-0">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-4 group">
+                <div className="flex items-center justify-center w-11 h-11 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-full group-hover:bg-white/30 transition-all duration-300 flex-shrink-0">
                   <Phone
-                    size={20}
-                    className="text-white group-hover:scale-110 transition-all duration-300"
+                    size={18}
+                    className="text-white group-hover:scale-110 transition-all duration-300 md:size-5"
                     aria-hidden="true"
                   />
                 </div>
-                <div className="text-center sm:text-left flex-1">
-                  <p className="text-sm text-white/80 mb-2 font-semibold uppercase tracking-wide">
+                <div className="text-center md:text-left flex-1">
+                  <p className="text-xs md:text-sm text-white/80 mb-1 md:mb-2 font-semibold uppercase tracking-wide">
                     Phone
                   </p>
                   <a
                     href={`tel:${data.mobile}`}
-                    className="text-white hover:text-white/90 text-base lg:text-lg transition-colors duration-200 font-medium block"
+                    className="text-white hover:text-white/90 text-sm md:text-base lg:text-lg transition-colors duration-200 font-medium block"
                     aria-label={`Call ${data.mobile}`}
                   >
                     {data.mobile}
@@ -308,21 +310,21 @@ export default function Footer() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-3 group justify-center sm:justify-start">
-                <div className="flex items-center justify-center w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full group-hover:bg-white/30 transition-all duration-300 flex-shrink-0">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-3 md:gap-4 group">
+                <div className="flex items-center justify-center w-11 h-11 md:w-12 md:h-12 bg-white/20 backdrop-blur-sm rounded-full group-hover:bg-white/30 transition-all duration-300 flex-shrink-0">
                   <Mail
-                    size={20}
-                    className="text-white group-hover:scale-110 transition-all duration-300"
+                    size={18}
+                    className="text-white group-hover:scale-110 transition-all duration-300 md:size-5"
                     aria-hidden="true"
                   />
                 </div>
-                <div className="text-center sm:text-left flex-1 min-w-0">
-                  <p className="text-sm text-white/80 mb-2 font-semibold uppercase tracking-wide">
+                <div className="text-center md:text-left flex-1 min-w-0">
+                  <p className="text-xs md:text-sm text-white/80 mb-1 md:mb-2 font-semibold uppercase tracking-wide">
                     Email
                   </p>
                   <a
                     href={`mailto:${data.email}`}
-                    className="text-white hover:text-white/90 text-base lg:text-lg transition-colors duration-200 font-medium block break-all"
+                    className="text-white hover:text-white/90 text-sm md:text-base lg:text-lg transition-colors duration-200 font-medium block break-all"
                     aria-label={`Send email to ${data.email}`}
                   >
                     {data.email}
@@ -333,11 +335,11 @@ export default function Footer() {
 
             {/* Social Media Links */}
             {socialLinks.length > 0 && (
-              <div className="text-center">
+              <div className="text-center md:text-left">
                 <p className="text-white/90 text-sm lg:text-base font-medium mb-3 lg:mb-4">
                   Follow Us
                 </p>
-                <div className="flex gap-3 lg:gap-4 justify-center flex-wrap">
+                <div className="flex gap-3 lg:gap-4 justify-center md:justify-start flex-wrap">
                   {socialLinks.map((link, index) => (
                     <a
                       key={index}

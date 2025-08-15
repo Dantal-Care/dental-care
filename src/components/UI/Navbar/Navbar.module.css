@@ -24,8 +24,9 @@
   align-items: center;
 }
 
-
-.logoContainer, .navLeft, .contactBtn {
+.logoContainer,
+.navLeft,
+.contactBtn {
   z-index: 11;
 }
 
@@ -38,7 +39,7 @@
   align-items: center;
   justify-content: center;
   padding: 5px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logoImage {
@@ -72,8 +73,12 @@
   color: white;
 }
 
+.activeLink {
+  color: white !important;
+}
+
 .contactBtn {
-  background: #00B4D8;
+  background: #00b4d8;
   border-radius: 39.5px;
   padding: 0 1.7rem;
   color: white;
@@ -98,12 +103,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom left, transparent 50%, #94DBF8 50%);
-  background-size: 200% 200%; 
-  background-position: top right; 
-  transition: background-position 0.4s ease-out; 
-  z-index: -1; 
-  border-radius: 39.5px; 
+  background: linear-gradient(to bottom left, transparent 50%, #94dbf8 50%);
+  background-size: 200% 200%;
+  background-position: top right;
+  transition: background-position 0.4s ease-out;
+  z-index: -1;
+  border-radius: 39.5px;
 }
 
 .contactBtn:hover::before {
@@ -111,7 +116,7 @@
 }
 
 .contactBtn:hover {
-  color: white; 
+  color: white;
 }
 
 .icon {
@@ -121,7 +126,6 @@
   height: 1.5rem;
   filter: brightness(0) invert(1) drop-shadow(0 0 1px white);
 }
-
 
 .contactBtn:hover .icon {
   transform: translateX(3px);
@@ -139,14 +143,15 @@
   .navbar {
     flex-direction: column;
     padding: 1rem;
+    z-index: 99999;
   }
-  
+
   .navLeft {
     flex-direction: column;
     width: 100%;
     gap: 1rem;
   }
-  
+
   .navLinks {
     flex-direction: column;
     gap: 1rem;
@@ -154,7 +159,7 @@
     width: 100%;
     margin-right: 0;
   }
-  
+
   .contactBtn {
     position: relative;
     border-radius: 39.6px;
@@ -164,8 +169,6 @@
     padding: 0.6rem 1.5rem;
   }
 }
-
-
 
 /*----------------------------------------*/
 .hamburger {
@@ -191,6 +194,7 @@
     position: absolute;
     top: 1.4rem;
     right: 1.7rem;
+    z-index: 100000;
   }
 
   .navLeft {
@@ -202,6 +206,7 @@
     padding: 1rem;
     margin-top: 1rem;
     border-radius: 1rem;
+    z-index: 100000;
     animation: slideDown 0.3s ease-in-out forwards;
   }
 
