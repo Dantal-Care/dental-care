@@ -220,7 +220,7 @@ export default function Footer() {
             <div className="mb-6">
               <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 lg:p-6 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
                 <Image
-                  src="/Logo.png"
+                  src="/logo.png"
                   width={100}
                   height={100}
                   alt={`${data.name} Logo`}
