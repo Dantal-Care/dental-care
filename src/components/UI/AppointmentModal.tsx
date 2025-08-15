@@ -64,7 +64,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({
               {/* Opening Hours */}
               <div className="mb-4 sm:mb-6">
                 <div className="flex items-center mb-3 sm:mb-4">
-                  <Clock className="text-cyan-600 mr-2 sm:mr-3" size={20} />
+                  <Clock className="text-primary mr-2 sm:mr-3" size={20} />
                   <h3 className="text-base sm:text-lg font-semibold text-gray-800">
                     Opening Hours
                   </h3>
@@ -75,7 +75,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({
                     <span className="font-medium text-gray-700 text-sm sm:text-base">
                       Monday - Saturday
                     </span>
-                    <span className="text-cyan-600 font-semibold text-sm sm:text-base">
+                    <span className="text-primary font-semibold text-sm sm:text-base">
                       4:00 PM - 9:00 PM
                     </span>
                   </div>
@@ -83,7 +83,7 @@ const AppointmentModal: React.FC<AppointmentModalProps> = ({
                     <span className="font-medium text-gray-700 text-sm sm:text-base">
                       Sunday
                     </span>
-                    <span className="text-cyan-600 font-semibold text-sm sm:text-base">
+                    <span className="text-primary font-semibold text-sm sm:text-base">
                       8:30 AM - 12:00 PM
                     </span>
                   </div>
