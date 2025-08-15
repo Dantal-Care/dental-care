@@ -6,20 +6,20 @@ import Image from 'next/image';
 
 const HeroSlider = ({ title }: { title: string }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const images = [
     {
-      src: "/slide1.jpg", 
-      alt: "Smiling patient with dentist"
+      src: '/slide1.jpg',
+      alt: 'Smiling patient with dentist',
     },
     {
-      src: "/slide2.jpg", 
-      alt: "Dental clinic interior"
+      src: '/slide2.jpg',
+      alt: 'Dental clinic interior',
     },
     {
-      src: "/slide3.jpg", 
-      alt: "Dentist working with patient"
-    }
+      src: '/slide3.jpg',
+      alt: 'Dentist working with patient',
+    },
   ];
 
   useEffect(() => {
@@ -31,16 +31,16 @@ const HeroSlider = ({ title }: { title: string }) => {
 
   return (
     <section className={styles.heroContainer}>
-      {}
       <div className={styles.slidesContainer}>
         {images.map((image, index) => (
-          <div 
+          <div
             key={index}
-            className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
+            className={`${styles.slide} ${
+              index === currentSlide ? styles.active : ''
+            }`}
           >
-            {}
             <div className={styles.imageLayer}>
-              <Image 
+              <Image
                 src={image.src}
                 alt={image.alt}
                 fill
@@ -51,34 +51,33 @@ const HeroSlider = ({ title }: { title: string }) => {
                 }}
               />
             </div>
-            
-            {}
+
             <div className={styles.gradientOverlay}></div>
-            
-            {}
+
             <div className={styles.textContent}>
               <h1 className={styles.heading}>{title}</h1>
               <button className={styles.ctaButton}>
-                Book an appointment 
+                Book an appointment
                 <Image
-                          src="/contact.png"
-                          alt="Send Icon"
-                          width={30}
-                          height={25}
-                          className={styles.icon}
-                        />
+                  src="/contact.png"
+                  alt="Send Icon"
+                  width={30}
+                  height={25}
+                  className={styles.icon}
+                />
               </button>
             </div>
           </div>
         ))}
       </div>
-      
-      {}
+
       <div className={styles.dotsContainer}>
         {images.map((_, index) => (
           <button
             key={index}
-            className={`${styles.dot} ${index === currentSlide ? styles.activeDot : ''}`}
+            className={`${styles.dot} ${
+              index === currentSlide ? styles.activeDot : ''
+            }`}
             onClick={() => setCurrentSlide(index)}
             aria-label={`Go to slide ${index + 1}`}
           />
